@@ -295,8 +295,8 @@ function buildResultCard() {
 };
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault(); // prevent form from submitting and reloading the page
-    checkInputLength();
+    event.preventDefault();
+    if (checkInputLength() === false) return;
     fillTable();
     buildResultCard();
 });
