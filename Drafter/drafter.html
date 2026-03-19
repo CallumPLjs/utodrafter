@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Utopia Drafter</title>
+</head>
+<body>
+    <h1>Drafter</h1>
+    <div class="top-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Drafter</a></li>
+            <li><a href="../science/science.html">Science</a></li>            
+            <li><a href="../food/food.html">Food</a></li>
+        </ul>
+    </div>
+    <button id="autofill">AutoFill form</button>
+    <div>
+        <form id="myForm">
+            <div class="grid-container parameters">
+                <section class="grid-item section">
+                    <label for="land">Land :</label>
+                    <input class = "input_field" type="number" step="any" name="land" id="land" placeholder="land : acres" required>
+                    <span class="error-message"></span> <br>
+
+                    <label for="homes">Future homes :</label>
+                    <input class = "input_field_sx" type="number" step="any" name="homes" id="homes" placeholder="future homes : 0.1 for 10%" required>
+                    <span class="error-message"></span><br>
+
+                    <label for="total_pop">Total population :</label>
+                    <input class="input_field" type="number" step="any" name="total_pop" id="total_pop" placeholder="total population : council page" required>
+                    <span class="error-message"></span><br>
+
+                    <label for="peons">Peons :</label>
+                    <input class = "input_field" type="number" step="any" name="peons" id="peons" placeholder="peons : throne page" required>
+                    <span class="error-message"></span><br>
+
+                    <label for="ticks1">Ticks for drafting :</label>
+                    <input class="input_field_s" type="number" step="any" name="ticks1" id="ticks1" placeholder="ticks to draft" required>
+                    <span class="error-message"></span><br>
+                </section>
+
+                <section class="grid-item">
+                    <label for="military">Military :</label>
+                    <input class="input_field" type="number" step="any" name="military" id="military" placeholder="military : military page"
+                        required>
+                    <span class="error-message"></span><br>
+
+                    <label for="dr_sci">Draft science :</label>
+                    <input class = "input_field_sx" type="number" step="any" name="dr_sci" id="dr_sci" placeholder="dr sci : 1.1 for 10%" required>
+                    <span class="error-message"></span><br>
+
+                    <label for="pop_sci">Population science :</label>
+                    <input class="input_field_sx" type="number" step="any" name="pop_sci" id="pop_sci" placeholder="pop sci : 1.1 for 10%" required>
+                    <span class="error-message"></span><br>
+
+                    <label for="rit_eff">Ritual strength :</label>
+                    <input class = "input_field_s" type="number" step="any" name="rit_eff" id="rit_eff" placeholder="rit % : throne page" required>
+                    <span class="error-message"></span><br>
+
+                    <label for="Guilds">Net guilds :</label>
+                    <input class = "input_field" type="number" step="any" name="guilds" id="guilds" placeholder="guilds net : growth page" required>
+                    <span class="error-message"></span><br>
+                </section>
+
+                <section class="grid-item">
+                    <label for="pat">Patriotism active?</label>
+                    <select name="pat" id="pat">
+                        <option value="yes" selected="selected">Yes</option>
+                        <option value="no">No</option>
+                    </select><br>
+                    <label for="dr">Select draft rate</label>
+                    <select name="dr" id="dr">
+                        <option value="non">None</option>
+                        <option value="res">Reservist</option>
+                        <option value="nor">Normal</option>
+                        <option value="agg">Aggressive</option>
+                        <option value="eme" selected="selected">Emergency</option>
+                    </select><br>
+                    <label for="honor">Select honor rank</label>
+                    <select name="honor" id="honor">
+                        <option value="pea">Peasant</option>
+                        <option value="kni">Knight</option>
+                        <option value="lor" selected="selected">Lord</option>
+                        <option value="bar">Baron</option>
+                        <option value="vis">Viscount</option>
+                        <option value="cou">Count</option>
+                        <option value="mar">Marquis</option>
+                        <option value="duk">Duke</option>
+                        <option value="pri">Prince</option>
+                    </select><br>
+                    
+                </section>
+                
+            </div>
+            <div class="buttons">
+                <!-- <button>Save</button> -->
+                <button type="submit" value="Submit">Submit values</button>
+                <button type="reset">Reset fields</button>
+                <button id="clear">Clear page</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="grid-container results" id="results"></div>
+
+    <div>
+        <table id="draftTable" hidden>
+            <thead>
+                <tr>
+                    <th>Tick</th>
+                    <th>Peons</th>
+                    <th>Ppa</th>
+                    <th>Solds drafted tick</th>
+                    <th>Solds drafted total</th>
+                    <th>Total military</th>
+                    <th>Draft percent</th>
+                    <th>Mpa</th>
+                </tr>
+            </thead>
+            <tbody id="tab1"></tbody>
+        </table>
+    </div>
+
+
+    <!-- <script src="js.js"></script> -->
+    <script src="jsss.js"></script>
+</body>
+</html>

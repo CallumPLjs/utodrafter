@@ -1,0 +1,189 @@
+body {
+    background-color: rgb(28, 31, 31);
+    /* color: rgb(245, 181, 97); */
+    color: aqua;
+    /* color:rgb(39, 178, 31); */
+}
+
+.parameters {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+    margin: 0px 0px;
+}
+
+.section {
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+label{
+    display: inline-block;
+    width: 150px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+table{
+    margin: 30px 90px;
+    width: 90%;
+    text-align: center;
+}
+
+td, th{
+    /* border: 1px solid rgb(245, 181, 97); */
+    border: 1px solid aqua;
+    /* border: 1px solid rgb(39, 178, 31); */
+    border-collapse: collapse;
+    /* width: 12%; */
+}
+
+.buttons {
+    padding: 20px;
+    margin-left: 130px;
+}
+
+input, select, button{
+    /* background-color: rgb(101, 77, 45); */
+    background-color: rgb(45, 182, 228);
+    /* background-color: rgb(61, 165, 61); */
+    color:rgb(10, 10, 10);
+    padding: 2px;
+    border-radius: 5px;
+}
+
+select {
+    width: 120px;
+    text-align: center;
+}
+
+.results, .sci_results{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    
+}
+
+/* Change to 4 columns on medium screens */
+@media screen and (max-width: 768px) {
+    .results, .sci_results {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Change to 2 columns on small screens */
+@media screen and (max-width: 480px) {
+    .results, .sci_results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.result-card{
+    font-size: 1em;
+    text-align: center;
+    padding: none;
+    margin: none;
+    border: 7px solid rgb(21, 92, 116);
+    border-radius: 15px;
+}
+
+.card-part{
+    /* border: 3px solid rgb(181, 97, 220); */
+    /* border: 3px solid rgb(152, 69, 70); */
+    border: 2px solid rgb(15, 64, 81);
+    border-radius: 6px;
+    padding: none;
+    margin: none;
+}
+
+.card-part p{
+    padding: none;
+    margin: none;
+}
+
+.error-message {
+    display: inline-block;
+    color: red;
+    font-size: 12px;
+    text-align: right;
+}
+
+span{
+    width: 300px;
+    margin: none;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(43, 48, 48);
+}
+
+/* .top-menu {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-menu li {
+    margin: 0 10px;
+}
+
+.top-menu li a {
+    color: aqua;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 18px;
+}
+
+.top-menu li a:hover {
+    background-color: #555;
+} */
+
+.top-menu {
+    background-color: rgb(45, 182, 228);
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.top-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top-menu li {
+    margin: 0 10px;
+}
+
+.top-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.top-menu li a:hover {
+    background-color: rgb(28, 31, 31);
+    color: aqua;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Utopia Drafter</title>
+</head>
+
+<body>
+    <h1>Science simulator</h1>
+    <div class="top-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../drafter/drafter.html">Drafter</a></li>
+            <li><a href="#">Science</a></li>
+            <li><a href="../food/food.html">Food</a></li>
+        </ul>
+    </div>
+    <div>
+        <button id="autofill">AutoFill form</button>
+        <form id="myForm">
+            <div class="grid-container parameters">
+                <section class="grid-item section">
+                    <label for="unis">Universities percent :</label>
+                    <input class="input_field" type="number" step="any" name="unis" id="unis" placeholder="unis : percent" required><br>
+        
+                    <label for="days">Age length :</label>
+                    <input class="input_field_sx" type="number" step="any" name="days" id="days" placeholder="age length in days" required><br>
+
+                    <label for="extra_books">Bonus books :</label>
+                    <input class="input_field" type="number" step="any" name="extra_books" id="extra_books" placeholder="extra books" required><br>
+                </section>
+        
+                <section class="grid-item">
+                    <label for="fok">Fountain of knowledge</label>
+                    <select name="fok" id="fok">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select><br>
+                    <label for="rev">Revelation</label>
+                    <select name="rev" id="rev">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select><br>
+                </section>
+        
+                <section class="grid-item">                   
+                    <label for="book">Other book bonus</label>
+                    <select name="book" id="book">
+                        <option value="0">V0: 0%</option>
+                        <option value="10" selected="selected">Sage: 10%</option>
+                        <option value="15">V1: 15%</option>
+                        <option value="20">V2: 20%</option>
+                        <option value="25">V3: 25%</option>
+                    </select><br>
+
+                    <label for="spell">Estimated spell uptime</label>
+                    <select name="spell" id="spell">
+                        <option value="50">Lowest: 50%</option>
+                        <option value="65">V1: 65%</option>
+                        <option value="75">V1: 75%</option>
+                        <option value="85">V2: 85%</option>
+                        <option value="92">V2: 92%</option>
+                        <option value="100" selected="selected">Ideal: 100%</option>
+                    </select><br>
+                </section>
+        
+            </div>
+            <div class="buttons">
+                <!-- <button>Save</button> -->
+                <button type="submit" value="Submit">Submit values</button>
+                <button type="reset">Reset fields</button>
+                <button id="clear">Clear page</button>
+            </div>
+        </form>
+    </div>
+    <div class="grid-container sci_results" id="sci_results"></div>
+    <div>
+        <table id="scienceTable" hidden>
+            <thead>
+                <tr id="header2">
+                    <th>Tick</th>
+                    <th>Day</th>
+                    <th>TB</th>
+                    <th>S1</th>
+                    <th>S2</th>
+                    <th>S3</th>
+                    <th>S4</th>
+                    <th>S5</th>
+                </tr>
+            </thead>
+            <tbody id="tab2"></tbody>
+        </table>
+    </div>
+    <script src="jsclass.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
