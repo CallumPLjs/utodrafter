@@ -29,7 +29,6 @@ function checkInputLength() {
         let input = input_length[i].value;
         if (input.length > 7) {
             input_length[i].nextElementSibling.textContent = 'Must be 7 digits or less';
-            e.preventDefault();
             return false; // Stop script execution
         } else {
             input_length[i].nextElementSibling.textContent = '';
@@ -43,7 +42,6 @@ function checkInputLength() {
         let input_s = input_length_s[i].value;
         if (input_s.length > 3) {
             input_length_s[i].nextElementSibling.textContent = 'Must have max 3 digits.';
-            e.preventDefault();
             return false; // Stop script execution
         } else {
             input_length_s[i].nextElementSibling.textContent = '';
@@ -57,7 +55,6 @@ function checkInputLength() {
         let input_sx = input_length_sx[i].value;
         if (input_sx.length > 4) {
             input_length_sx[i].nextElementSibling.textContent = 'Must have max 2 decimals.';
-            e.preventDefault();
             return false; // Stop script execution
         } else {
             input_length_sx[i].nextElementSibling.textContent = '';
@@ -91,6 +88,9 @@ function getSelectValues() {
     let spells = results[10];
     let dr_opt = results[11];
     let honor = results[12];
+    let pat = 1;
+    let dr = 0;
+    let pop_hon = 1;
 
     const spellOptions = spells.selectedOptions;
     const spellValues = [];
